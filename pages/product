@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+
+ <style>
+.main{
+	width: 900px;height: 500px;margin: auto;position: relative;top: 100px;border:1px solid grey;
+}
+.innerL{
+	float: left;
+	width: 50%;
+	padding: 10px;
+}
+.innerL img{
+	width: 100%;
+	height: 410px;
+}
+.innerR{
+	float: right;
+	width: 50%;
+	padding: 10px;
+
+}
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  height: 80%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+#customers td{
+	padding: 3px;
+}
+@media only screen and (max-width: 390px) {
+ .main{
+width: 90%;
+height: 870px; }
+.innerL{
+	width: 100%;
+	height: 380px;
+}
+.innerL img{
+	width: 100%;
+	height: 300px;
+}
+.innerL p{
+	margin: 0px;
+
+}
+
+.innerR{
+	float: right;
+	width: 100%;
+	padding: 10px;
+
+}
+}
+</style>
+  </head>
+  <body>
+   <div class="main">
+   	<div class="innerL">
+   		<img src="https://earthsky.org/upl/2018/12/comet-wirtanen-Jack-Fusco-dec-2018-Anza-Borrego-desert-CA-e1544613895713.jpg">
+   		<h6 class="card-subtitle mb-2 text-muted" style="text-align: center;padding-top: 20px;">Intrested in this??</h6>
+   		<p style="text-align: center;font-weight: 16px;">
+   			Take Now
+   			<svg style="position: relative;top: 3px;" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path fill-rule="evenodd" d="M7.646 11.354a.5.5 0 0 1 0-.708L10.293 8 7.646 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0z"/>
+  <path fill-rule="evenodd" d="M4.5 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z"/>
+</svg>
+   		</p>
+   		
+
+   	</div>
+   	<div class="innerR">
+   		 <h5 class="card-title">Card title</h5>
+   		 <h6 class="card-subtitle mb-2 text-muted">Card subtitle/<span style="font-size: 14px;"> test </span><span style="font-size: 12px;"> <a href="#" class="card-link">Grab your Offer</a></span></h6>
+   		 <p>additional information</p>
+	<table id="customers">
+
+  <tr>
+    <td>Data 1</td>
+    <td>Data 2</td>
+  </tr>
+    <tr>
+    <td>Data 1</td>
+    <td>Data 2</td>
+  </tr>
+    <tr>
+    <td>Data 1</td>
+    <td>Data 2</td>
+  </tr>
+    <tr>
+    <td>Data 1</td>
+    <td>Data 2</td>
+  </tr>
+    <tr>
+    <td>Data 1</td>
+    <td>Data 2</td>
+  </tr>
+    <tr>
+    <td>Data 1</td>
+    <td>Data 2</td>
+  </tr>
+    <tr>
+    <td>Data 1</td>
+    <td>Data 2</td>
+  </tr>
+      <tr>
+    <td>Data 1</td>
+    <td>Data 2</td>
+  </tr>
+      <tr>
+    <td>Data 1</td>
+    <td>Data 2</td>
+  </tr>
+      <tr>
+    <td>Data 1</td>
+    <td>Data 2</td>
+  </tr>
+
+</table>
+ <h6 class="card-subtitle mb-2 text-muted"><span style="font-size: 12px;"> <a href="#" class="card-link">View Complete Details</a></span></h6>
+   <p style="text-align: center;"> <a href="#" class="btn btn-primary" >Are You Intrested??</a></p> 
+
+
+   		
+   	</div>
+   	
+   </div>
+
+	</div>
+   
+  </body>
+</html>

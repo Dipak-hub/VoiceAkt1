@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- Required meta tags -->
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+ <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+ <title>Hello, world!</title>
+
+<style>
+  *{transition:all 0.3s ease-in-out;
+}
+body{
+    background-color:#e9eaec ;
+}
+h5{
+  margin-left: 30px;
+}
+
+.name{
+  color: white;
+}
+.logo-img{
+  clear:both;
+  overflow:auto;
+}
+
+nav{float:right;
+  position: fixed;
+  top: 0%;}
+
+.logo img{
+  float:left;
+ }
+
+ul li{
+  display: inline-block; padding:10px;
+  font-size:20px; font-family:raleway;
+}
+
+ul li:hover{
+  color:orange;
+  
+}
+.intro{
+  position: relative;
+}
+h1{
+    margin-left: 200px;
+    
+}
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0%;
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .phone{
+      width:400px;
+      border-radius: 2px;
+  }
+  .topnav {
+    width:100%;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .active {
+    background-color: #7d3de4;
+    color: white;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 17px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .topnav a:hover, .dropdown:hover .dropbtn {
+    background-color: #555;
+    color: white;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child), .dropdown .dropbtn {
+      display: none;
+    }
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .topnav.responsive .dropdown {float: none;}
+    .topnav.responsive .dropdown-content {position: relative;}
+    .topnav.responsive .dropdown .dropbtn {
+      display: flex;
+      width: 100%;
+      text-align: left;
+    }
+    .product{
+        width: 100%;
+        display: block;
+    }
+    .product2{
+        width: 100%;
+        display: block;
+    }
+    .images{
+        display: block;
+        width: 100%;
+    }
+  }
+  .topnav .search-container {
+    display: flex;
+    float: right;
+    margin-right: 80px;
+  }
+  
+  .topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+  }
+  
+  .topnav .search-container button {
+    float: right;
+    margin-left: 20px;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .topnav .search-container button:hover {
+    background: #ccc;
+  }
+  a{text-decoration:none;}
+a:hover{color:#1bc1a3;
+text-decoration:underline ;}
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column-new {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+.content{
+ 
+}
+
+/* Clear floats after the columns */
+.content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.login-page {
+      width: 360px;
+      padding: 8% 0 0;
+      margin: auto;
+    }
+    .form {
+      position: relative;
+      z-index: 1;
+      background: #FFFFFF;
+      width: 120%;
+      margin: 0 auto 100px;
+      padding: 45px;
+      text-align: center;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+      margin-right: 50%;
+    }
+    .form input {
+      font-family: "Roboto", sans-serif;
+      outline: 0;
+      background: #f2f2f2;
+      width: 100%;
+      border: 0;
+      margin: 0 0 15px;
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    .form button {
+      font-family: "Roboto", sans-serif;
+      text-transform: uppercase;
+      outline: 0;
+      background: #4CAF50;
+      width: 100%;
+      border: 0;
+      padding: 15px;
+      color: #FFFFFF;
+      font-size: 14px;
+      -webkit-transition: all 0.3 ease;
+      transition: all 0.3 ease;
+      cursor: pointer;
+    }
+    .form button:hover,.form button:active,.form button:focus {
+      background: #43A047;
+    }
+    .form .message {
+      margin: 15px 0 0;
+      color: #b3b3b3;
+      font-size: 12px;
+    }
+    .form .message a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+    .form .register-form {
+      display: none;
+    }
+    .reach{
+      font-weight: bolder;
+      margin-left:60px;
+      margin-top: 60px;
+    }
+    .reach1{
+      font-weight: bolder;
+      margin-left:60px;
+      margin-top: 150px;
+    }
+    hr{
+      border: 1px solid black;
+    }
+    .title{
+        margin-left: 30px;
+    }
+    .product{
+        background-color:white;
+        width: 80%;
+        box-shadow: 5px 10px #888888;
+        margin-left:10%;
+    }
+    .product2{
+        background-color:white;
+        width: 80%;
+        box-shadow: 5px 10px #888888;
+        margin-left:10%;
+        margin-top: 80px;
+        height: 300px;
+
+    }
+    .images{
+        margin-top: 20px;
+        float: left;
+        padding: 5px;
+        width: 25%;
+    }
+    .product::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+    .description{
+        color: black;
+        font-size: large;
+        margin-top: 20px;
+    }
+    @media only screen and (max-width: 700px) {
+  .images {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .images {
+    width: 100%;
+  }
+}
+
+
+
+/* Footer */
+footer{
+      bottom: 0;
+    }
+    .footer-distributed{
+      background-color: #292c2f;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+      box-sizing: border-box;
+      width: 100%;
+      text-align: left;
+      font: bold 16px sans-serif;
+     
+      padding: 55px 50px;
+      margin-top: 80px;
+    }
+     
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right{
+      display: inline-block;
+      vertical-align: top;
+    }
+     
+    .footer-distributed .footer-left{
+      width: 40%;
+    }
+     
+    .footer-distributed h3{
+      color:  #ffffff;
+      font: normal 36px 'Cookie', cursive;
+      margin: 0;
+    }
+     
+    .footer-distributed h3 span{
+      color:  #5383d3;
+    }
+     
+     
+    .footer-distributed .footer-links{
+      color:  #ffffff;
+      margin: 20px 0 12px;
+      padding: 0;
+    }
+     
+    .footer-distributed .footer-links a{
+      display:inline-block;
+      line-height: 1.8;
+      text-decoration: none;
+      color:  inherit;
+    }
+     
+    .footer-distributed .footer-company-name{
+      color:  #8f9296;
+      font-size: 14px;
+      font-weight: normal;
+      margin: 0;
+    }
+     
+     
+    .footer-distributed .footer-center{
+      width: 35%;
+    }
+     
+    .footer-distributed .footer-center i{
+      background-color:  #33383b;
+      color: #ffffff;
+      font-size: 25px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 42px;
+      margin: 10px 15px;
+      vertical-align: middle;
+    }
+     
+    .footer-distributed .footer-center i.fa-envelope{
+      font-size: 17px;
+      line-height: 38px;
+    }
+     
+    .footer-distributed .footer-center p{
+      display: inline-block;
+      color: #ffffff;
+      vertical-align: middle;
+      margin:0;
+    }
+     
+    .footer-distributed .footer-center p span{
+      display:block;
+      font-weight: normal;
+      font-size:14px;
+      line-height:2;
+    }
+     
+    .footer-distributed .footer-center p a{
+      color:  #5383d3;
+      text-decoration: none;
+      
+    }
+     
+    .footer-distributed .footer-right{
+      width: 20%;
+    }
+     
+    .footer-distributed .footer-company-about{
+      line-height: 20px;
+      color:  #92999f;
+      font-size: 13px;
+      font-weight: normal;
+      margin: 0;
+    }
+     
+    .footer-distributed .footer-company-about span{
+      display: block;
+      color:  #ffffff;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+     
+    .footer-distributed .footer-icons{
+      margin-top: 25px;
+    }
+     
+    .footer-distributed .footer-icons a{
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      background-color:  #33383b;
+      border-radius: 2px;
+     
+      font-size: 20px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 35px;
+     
+      margin-right: 3px;
+      margin-bottom: 5px;
+    }
+     
+     
+    @media (max-width: 880px) {
+     
+      .footer-distributed{
+        font: bold 14px sans-serif;
+      
+      }
+     
+      .footer-distributed .footer-left,
+      .footer-distributed .footer-center,
+      .footer-distributed .footer-right{
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+     
+      .footer-distributed .footer-center i{
+        margin-left: 0;
+      }
+      .main {
+        line-height: normal;
+        font-size: auto;
+      }
+     
+    }
+    .footer-links a{
+      color: #fff;
+    }
+    @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+    
+    .login-page {
+      width: 360px;
+      padding: 8% 0 0;
+      margin: auto;
+    }
+    .form {
+      position: relative;
+      z-index: 1;
+      background: #FFFFFF;
+      max-width: 360px;
+      margin: 0 auto 100px;
+      padding: 45px;
+      text-align: center;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+      margin-right: 50px;
+    }
+    .form input {
+      font-family: "Roboto", sans-serif;
+      outline: 0;
+      background: #f2f2f2;
+      width: 100%;
+      border: 0;
+      margin: 0 0 15px;
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    .form button {
+      font-family: "Roboto", sans-serif;
+      text-transform: uppercase;
+      outline: 0;
+      background: #4CAF50;
+      width: 100%;
+      border: 0;
+      padding: 15px;
+      color: #FFFFFF;
+      font-size: 14px;
+      -webkit-transition: all 0.3 ease;
+      transition: all 0.3 ease;
+      cursor: pointer;
+    }
+    .form button:hover,.form button:active,.form button:focus {
+      background: #43A047;
+    }
+    .form .message {
+      margin: 15px 0 0;
+      color: #b3b3b3;
+      font-size: 12px;
+    }
+    .form .message a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+    .form .register-form {
+      display: none;
+    }
+
+</style>
+</head>
+<body>
+  
+  <div class="logo-img" style="font-family: Anton,sans-serif;">
+    <div class="logo">
+      <img src="/assets/1707ebb8-7a64-440f-bd50-97c76a137858_200x200.png" alt="" width="120"/>
+      <div class="intro">
+      </div>
+    </div>
+    
+    <div class="address" style="float: right;">
+      <p class="contact" style="margin-left:150px ;margin-top:10%; color:blue;" ><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-geo-alt" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M12.166 8.94C12.696 7.867 13 6.862 13 6A5 5 0 0 0 3 6c0 .862.305 1.867.834 2.94.524 1.062 1.234 2.12 1.96 3.07A31.481 31.481 0 0 0 8 14.58l.208-.22a31.493 31.493 0 0 0 1.998-2.35c.726-.95 1.436-2.008 1.96-3.07zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+        <path fill-rule="evenodd" d="M8 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+      </svg> Patparganj</span>, East Delhi<span>      ||   <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-envelope-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+      </svg>    voiceakt@gmail.com</span>
+    
+        <span>      ||   <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-telephone-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
+          </svg>   +91 9625536171 </span></p>
+     </div>
+       </div>
+    </div>
+
+    
+    <hr />
+    <div class="topnav" id="myTopnav">
+      <a href="#home" class="active">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Business Segments
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div> 
+      <div class="dropdown">
+        <button class="dropbtn">Know Us
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div> 
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+      <a href="javascript:void(1);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+      <div class="search-container">
+        <form action="/action_page.php">
+          <input type="text" placeholder="Search.." name="search">
+          <button class="btn btn-default" type="submit">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+              <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+     </div>
+     <div class="content">
+         <h1 class="title">Product & Services</h1>
+     <div class="product">
+         <a href="/pages/political-campaign-management.html"><h5 class="names">Political Campgain Management</h5></a>
+         <div class="images">
+             <img src="/assets/product-jpeg-500x500.jfif" width="50%" height="50%">
+             <p class="description">Political Survey and Opinion</p>
+         </div>
+         <div class="images">
+            <img src="/assets/election-services-500x500.jpg" width="50%" height="50%">
+            <p class="description">Assembly Election Management Solution</p>
+         </div>
+         <div class="images">
+            <img src="/assets/election-campaign-manager-500x500.jpeg" width="50%" height="50%">
+            <p class="description">Election Campaign Manager</p>
+         </div>
+         <div class="images">
+            <img src="/assets/political-digital-marketing-service-500x500.jpg" width="50%" height="50%">
+            <p class="description">Political Digital Marketing</p>
+         </div>
+        <a href="/pages/political-campaign-management.html"><p><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+          </svg>View More Details</p></a>
+    </div>
+    <div class="content">
+    <div class="product2">
+        <a href="/pages/mobile-marketing.html"><h5 class="names">Mobile Marketing Services</h5></a>
+        <div class="images">
+            <img src="/assets/product/app-development.jpg" width="30%" height="30%">
+            <p class="description">Mobile App Development</p>
+        </div>
+        <div class="images">
+           <img src="/assets/product/sms-ivrs-whatsapp-obd-calls-by-janadhar-india-250x250.png" width="40%" height="40%">
+           <p class="description">SMS Marketing for Elections</p>
+        </div>
+        <div class="images">
+           <img src="/assets/product/mobile-marketing-by-janadhar-india-250x250.jpg" width="30%" height="30%">
+           <p class="description">Mobile Marketing Services</p>
+        </div>
+        <div class="image">
+       <a href="/pages/political-campaign-management.html"><p class="details" style="margin-top: 200px;"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+           <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+         </svg>View More Details</p></a>
+         </div>
+   </div>
+     </div>
+     <div class="content">
+      <div class="product2">
+          <a href="/pages/survey-service.html"><h5 class="names">Survey Services</h5></a>
+          <div class="images">
+              <img src="/assets/product/opinion-poll.jpg" width="50%" height="50%">
+              <p class="description">Opinion Poll for Elections</p>
+          </div>
+          <div class="images">
+            <img src="/assets/product/telecomm-enabled-market-survey-500x500.jpg" width="50%" height="50%">
+            <p class="description">Telecomm Enabled Market Survey</p>
+         </div>
+         <div class="images">
+            <img src="/assets/product/door-to-door-survey-500x500.jpg" width="50%" height="50%">
+            <p class="description">Door to Door Survey Service</p>
+         </div>
+         <div class="images">
+            <img src="/assets/product/election-survey-service-500x500.jpg" width="50%" height="50%">
+            <p class="description">Political Digital Marketing</p>
+            <a href="/pages/political-campaign-management.html"><p><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+            </svg>View More Details</p></a>
+         </div>
+
+          </div>
+     </div>
+
+     <div class="content">
+      <div class="product2">
+          <a href="/pages/survey-service.html"><h5 class="names">Marketing Services</h5></a>
+          <div class="images">
+              <img src="/assets/product/WhatsApp-Marketing.jpg" width="50%" height="50%">
+              <p class="description">WhatsApp Marketing</p>
+          </div>
+          <div class="images">
+            <img src="/assets/product/Event-Management.jfif" width="50%" height="50%">
+            <p class="description">Event Management for Elections</p>
+         </div>
+         <div class="images">
+            <a href="/pages/political-campaign-management.html"><p class="details" style="margin-top: 200px;"></p><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+            </svg>View More Details</p></a>
+         </div>
+
+          </div>
+     </div>
+
+     <div class="content">
+      <div class="product2">
+          <a href="/pages/survey-service.html"><h5 class="names">Advertisement Services</h5></a>
+          <div class="images">
+              <img src="/assets/product/mobile-van-advertising-500x500.png" width="50%" height="50%">
+              <p class="description">Mobile Van Advertisement Services</p>
+          </div>
+          <div class="images">
+            <img src="/assets/product/Nukkad-Natak.jfif" width="50%" height="50%">
+            <p class="description">Nukkad Natak for Elections & NGO</p>
+         </div>
+         <div class="images">
+            <img src="/assets/product/cinema-advertising-500x500.jpg" width="50%" height="50%">
+            <p class="description">Cinema Advertising Service</p>
+         </div>
+         <div class="images">
+            <a href="/pages/political-campaign-management.html"><p class="details" style="margin-top: 200px;"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+            </svg>View More Details</p></a>
+         </div>
+
+          </div>
+     </div>
+
+     <div class="content">
+      <div class="product2">
+          <a href="/pages/survey-service.html"><h5 class="names">Bulk Voice Call Services</h5></a>
+          <div class="images">
+              <img src="/assets/product/voice-call-service.jpg" width="50%" height="50%">
+              <p class="description">Bulk Voice Call Services</p>
+          </div>
+          <div class="images">
+            <img src="/assets/product/mobile-marketing.jfif" width="80%" height="70%">
+            <p class="description">Mobile Marketing Services</p>
+         </div>
+         <div class="images">
+            <a href="/pages/political-campaign-management.html"><p class="details" style="margin-top: 200px;"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+            </svg>View More Details</p></a>
+         </div>
+
+          </div>
+     </div>
+
+     <div class="content">
+      <div class="product2">
+          <a href="/pages/survey-service.html"><h5 class="names">Market Research Services</h5></a>
+          <div class="images">
+              <img src="/assets/product/Health-Survey.jpg" width="50%" height="50%">
+              <p class="description">Health Survey Services</p>
+          </div>
+          <div class="images">
+            <img src="/assets/product/Telephone-Survey.jfif" width="80%" height="70%">
+            <p class="description">Telephone Survey Service</p>
+         </div>
+         <div class="images">
+            <a href="/pages/political-campaign-management.html"><p class="details" style="margin-top: 200px;"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+            </svg>View More Details</p></a>
+         </div>
+
+          </div>
+     </div>
+
+     
+     <div class="content">
+      <div class="product2">
+          <a href="/pages/survey-service.html"><h5 class="names">SMS Services</h5></a>
+          <div class="images">
+              <img src="/assets/product/bulk-sms-services-500x500.jpg" width="50%" height="50%">
+              <p class="description">Bulk SMS Services</p>
+              </div>
+         <div class="images">
+            <a href="/pages/political-campaign-management.html"><p class="details" style="margin-top: 200px;"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+            </svg>View More Details</p></a>
+         </div>
+     </div>
+     </div>
+
+     <div class="content">
+      <div class="product2">
+          <a href="/pages/survey-service.html"><h5 class="names">Digital Marketing Services</h5></a>
+          <div class="images">
+              <img src="/assets/product/digital-marketing.jpg" width="70%" height="70%">
+              <p class="description">Digital Marketing</p>
+              </div>
+         <div class="images">
+            <a href="/pages/political-campaign-management.html"><p class="details" style="margin-top: 200px;"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+            </svg>View More Details</p></a>
+         </div>
+     </div>
+     </div>
+
+
+     <div class="content">
+      <div class="product2">
+          <a href="/pages/survey-service.html"><h5 class="names">Election Material</h5></a>
+          <div class="images">
+              <img src="/assets/product/election-material.jpg" width="50%" height="50%">
+              <p class="description">Materials for Elections</p>
+              </div>
+         <div class="images">
+            <a href="/pages/political-campaign-management.html"><p class="details" style="margin-top: 200px;"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+            </svg>View More Details</p></a>
+         </div>
+     </div>
+     </div>
+
+     <div class="content">
+      <div class="product2">
+          <a href="/pages/survey-service.html"><h5 class="names">Social Media Marketing</h5></a>
+          <div class="images">
+              <img src="/assets/product/social-media-marketing.jpg" width="50%" height="50%">
+              <p class="description">Social Media Marketing</p>
+              </div>
+         <div class="images">
+            <a href="/pages/political-campaign-management.html"><p class="details" style="margin-top: 200px;"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+            </svg>View More Details</p></a>
+         </div>
+     </div>
+     </div>
+
+
+
+     <!--Footer-->
+     <footer class="footer-distributed">
+
+      <div class="footer-left">
+      
+      <h3>Voice<span>AKt</span></h3>
+       <ol>
+      <p class="footer-links">
+        <p class="footer-links">Our Company</p>
+      <li ><a href="#">Home</a></li>
+      ·
+      <li><a href="#">Business Segments</a></li>
+      ·
+      <li><a href="#">Know Us</a></li>
+      ·
+      <li><a href="#">Contact Us</a></li>
+      ·
+      </p>
+      </ol>
+      
+      <p class="footer-company-name"  style="margin-top: 280px;">Developed and Managed By Dipak Choudhary</p>
+      </div>
+      
+      <div class="footer-center">
+        <span class="center" style="color: white;">Visit Us</span>
+      
+      <div>
+      <i class="fa fa-map-marker"></i>
+      <p><span>196 A</span><span>Chander Vihar, IP Extn, Patparganj</span> East Delhi: 110092</p>
+      </div>
+      
+      <div>
+      <i class="fa fa-phone"></i>
+      <p>+91 9625536171</p>
+      </div>
+      
+      <div>
+      <i class="fa fa-envelope"></i>
+      <p><a href="mailto:support@company.com">voiceakt@gmail.com</a></p>
+      </div>
+      
+      </div>
+      
+      <div class="footer-right">
+      
+      <p class="footer-company-about">
+      <span>Leave a message, we will call you back</span>
+      <div class="login-page">
+        <div class="form">
+          <form class="login-form" action="#">
+            <input type="email" placeholder="Email"/>
+            <input type="text" placeholder="Full Name"/>
+            <input type="number" placeholder="Mobile No."/>
+            <button>Submit</button>
+          </form>
+        </div>
+      </div>
+      
+      </p>
+      
+      <div class="footer-icons">
+      
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-github"></i></a>
+      
+      </div>
+      
+      </div>
+      
+      </footer>
+      
+     </body>
+     </html>
